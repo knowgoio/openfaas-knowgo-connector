@@ -42,7 +42,6 @@ func main() {
 		creds = types.GetCredentials()
 	}
 
-
 	var gatewayURL string
 
 	if gatewayServer != "" {
@@ -87,7 +86,7 @@ func main() {
 	}
 
 	sub, err := client.Subscribe(&api.SubscriptionRequest{
-		Event:       *topic,
+		Event: *topic,
 	})
 	if err != nil {
 		fmt.Println("failed to subscribe to notifications: ", err)
